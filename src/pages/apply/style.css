@@ -1,0 +1,5 @@
+.applyContainer h1,
+.applyContainer h3,
+.applyContainer p {
+  color: var(--dark-blue);
+}
