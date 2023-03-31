@@ -4,11 +4,12 @@
   width: 70%;
 }
 
-.wide{
+.wide {
   width: 100%;
+  margin-bottom: -10px;
 }
 
-.logo{
+.logo {
   height: 20vh;
   padding: 5px;
 }
