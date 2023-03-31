@@ -1,16 +1,14 @@
 import { Link } from "react-router-dom";
 import navConfig from "./config";
 import "./style.css";
-import Logo from "../../pages/home/Logo";
+import LinkAndLogo from "../LinkAndLogo";
 
 export default function NavigationBar() {
   const activeLink = navConfig.find((navLink) => navLink.path === window.location.pathname);
   return (
     <div className="navBar">
       <div className="navBarLogo">
-        <Link to="/home">
-          <Logo src="phoenix.png" />
-        </Link>
+        <LinkAndLogo href="/home" src="phoenix.svg" />
       </div>
       <div className="navBarLinkContainer">
         <ul className="navBarLinks">

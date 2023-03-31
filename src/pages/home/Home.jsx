@@ -1,16 +1,15 @@
 import './style.css';
 import { Link } from "react-router-dom";
-import BG from "./BG";
-import Logo from "./Logo";
+import BG from "../../components/BG";
+import LinkAndLogo from "../../components/LinkAndLogo";
 
 function Home() {
-  const placeholder = "https://picsum.photos/400";
   return (
     <div>
       <img
         className="wide"
-        src="https://picsum.photos/1920/800"
-        alt="phoenix logo"
+        src="images/header.png"
+        alt="the phoenix team"
       />
       <BG>
         <h2>Who we are</h2>
@@ -25,11 +24,11 @@ function Home() {
         <h2>Drive Team</h2>
         <img
           className="float_left"
-          src={placeholder}
-          alt="placeholder"
+          src="images/drive_team.jpg"
+          alt="one of our robot cars"
         />
-        <p> Our award-winning Drive Team is working on the next big thing, Autonomous Driving with
-          the self-made 1:10 scale car. One of the highlights is the yearly participation at
+        <p> Our award-winning Drive Team is working on the next big thing, Autonomous Driving, with
+          their self-made 1:10 scale car. One of the highlights is the yearly participation at
           the&nbsp;
           <a
             href="https://www.epc.ed.tum.de/phoenix/autonomous-drive/carolo-cup/"
@@ -42,8 +41,8 @@ function Home() {
         <h2>Flight Team</h2>
         <img
           className="float_right"
-          src={placeholder}
-          alt="placeholder"
+          src="images/flight_team.jpg"
+          alt="one of our drones"
         />
         <p> The Flight Team concentrates on drones. Current projects include programming a drone
           to act like the Snatch from Harry Potter’s Quidditch game. Various technologies like
@@ -53,9 +52,9 @@ function Home() {
       </BG>
       <BG>
         <h2>Our sponsors and academic supporters</h2>
-        <Logo src="exotec.svg" />
-        <Logo src="fsd.jpg" />
-        <Logo src="chair.jpg" />
+        <LinkAndLogo title="Exotec" href="https://www.exotec.com/" src="exotec.svg" />
+        <LinkAndLogo title="Institute of Flight System Dynamics" href="https://www.epc.ed.tum.de/en/rt/home/" src="fsd.jpg" />
+        <LinkAndLogo title="Chair of Automatic Control" href="https://www.fsd.ed.tum.de/" src="chair.jpg" />
         <p>
           We are always open to collaborations.
         </p>

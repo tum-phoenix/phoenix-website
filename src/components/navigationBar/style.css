@@ -9,8 +9,9 @@
   left: 0;
 }
 
-.navBarLogo {
-  object-fit: cover;
+.navBarLogo .logo {
+  padding: 1em;
+  max-height: 10vh;
 }
 
 .navBar h1 {
@@ -28,10 +29,6 @@
 
 .navBar h1:hover {
   color: var(--pink);
-}
-
-.navBar a {
-  text-decoration: none;
 }
 
 .navBarBubble {
