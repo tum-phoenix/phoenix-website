@@ -9,6 +9,10 @@
   left: 0;
 }
 
+.navBarLogo {
+  object-fit: cover;
+}
+
 .navBar h1 {
   margin-top: 0;
   color: var(--dark-blue);
@@ -46,11 +50,11 @@
 }
 
 .navBarLinks .activeLink {
-  color: var(--green);
+  color: var(--red);
 }
 
 .navBarLinks .activeLink:hover {
-  color: var(--green);
+  color: var(--red);
 }
 
 .navBarLinks li {
@@ -66,9 +70,9 @@
 }
 
 .navBarLinks a:hover {
-  color: var(--pink);
+  color: var(--link-blue);
 }
 
 .navBarLinks a::selection {
-  background-color: var(--green);
+  background-color: var(--dark-blue);
 }

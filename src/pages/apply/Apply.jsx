@@ -13,7 +13,7 @@ function Apply() {
           Found something that you’re interested in?
           Then fill out this form and we will get back to you within a few days.
           <br />
-          Unsolicited applications are also welcome!
+          Haven&apos;t found anything? Let us know. Other applications are also welcome!
         </p>
       </div>
       <h2 className="positionsText">Open positions</h2>

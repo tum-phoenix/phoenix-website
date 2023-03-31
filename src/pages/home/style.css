@@ -1,0 +1,42 @@
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.wide{
+  width: 100%;
+}
+
+.logo{
+  height: 20vh;
+  padding: 5px;
+}
+
+.light_bg {
+  padding: 1em 1em 1em 1em;
+  color: var(--dark-blue);
+  background-color: var(--beige);
+  display: flow-root;
+}
+
+.dark_bg {
+  padding: 1em;
+  color: var(--beige);
+  background-color: var(--dark-blue);
+  display: flow-root;
+}
+
+.clear {
+  clear: both;
+}
+
+.float_right {
+  float: right;
+  padding-left: 1em;
+}
+
+.float_left {
+  float: left;
+  padding-right: 1em;
+}
