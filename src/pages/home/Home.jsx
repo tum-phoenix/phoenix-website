@@ -6,11 +6,14 @@ import LinkAndLogo from "../../components/LinkAndLogo";
 function Home() {
   return (
     <div>
-      <img
-        className="wide"
-        src="images/header.png"
-        alt="the phoenix team"
-      />
+      <div className="container">
+        <img
+          className="background"
+          src="images/team.jpg"
+          alt="the phoenix team"
+        />
+        <h1 className="header">Prototyping the Next Generation of Autonomous</h1>
+      </div>
       <BG>
         <h2>Who we are</h2>
         <p>We are the Phoenix Robotics student club at TUM. A passionate team of students from
@@ -51,10 +54,18 @@ function Home() {
         <Link to="/flight">Learn more &gt;</Link>
       </BG>
       <BG>
-        <h2>Our sponsors and academic supporters</h2>
+        <h2>Our supporters</h2>
         <LinkAndLogo title="Exotec" href="https://www.exotec.com/" src="exotec.svg" />
-        <LinkAndLogo title="Institute of Flight System Dynamics" href="https://www.epc.ed.tum.de/en/rt/home/" src="fsd.jpg" />
-        <LinkAndLogo title="Chair of Automatic Control" href="https://www.fsd.ed.tum.de/" src="chair.jpg" />
+        <LinkAndLogo
+          title="Institute of Flight System Dynamics"
+          href="https://www.epc.ed.tum.de/en/rt/home/"
+          src="fsd.jpg"
+        />
+        <LinkAndLogo
+          title="Chair of Automatic Control"
+          href="https://www.fsd.ed.tum.de/"
+          src="chair.jpg"
+        />
         <p>
           We are always open to collaborations.
         </p>
