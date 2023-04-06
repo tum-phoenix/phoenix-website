@@ -24,11 +24,11 @@
 }
 
 .navBar h1::selection {
-  background-color: var(--green);
+  background-color: var(--red);
 }
 
 .navBar h1:hover {
-  color: var(--pink);
+  color: var(--grey);
 }
 
 .navBarBubble {
@@ -67,7 +67,7 @@
 }
 
 .navBarLinks a:hover {
-  color: var(--link-blue);
+  color: var(--grey);
 }
 
 .navBarLinks a::selection {

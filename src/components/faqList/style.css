@@ -21,6 +21,7 @@
 
 .faq-question {
   display: flex;
+  margin-bottom: 0.5em;
   align-items: center;
   cursor: pointer;
 }
@@ -36,7 +37,7 @@
 }
 
 .faq-icon {
-  color: #BDBDBD;
+  color: var(--grey);
   font-size: 10px;
   margin-right: 20px;
 }

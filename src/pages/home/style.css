@@ -8,6 +8,18 @@
   max-height: 40vh;
 }
 
+.background {
+  width: 100%;
+  height: 98vh;
+  object-fit: cover;
+  object-position: top;
+  z-index: -1;
+}
+
+.home_container a {
+  color: var(--link-blue);
+}
+
 .container {
   position: relative;
 }
@@ -20,10 +32,13 @@
 .header {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+  left: 5%;
+  text-align: left;
   color: var(--beige);
+}
+
+.red {
+  color: var(--red);
 }
 
 .logo {
@@ -54,4 +69,25 @@
 .float_left {
   float: left;
   padding-right: 1em;
+}
+
+.red_line {
+  height: 8px;
+  background-color: var(--red);
+  border: none;
+  margin: 0;
+}
+
+.description_text {
+  font-size: 1.5em;
+  margin: 80px;
+}
+
+.logo_container {
+  width: 450px;
+  height: 180px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 50px;
+  display: inline-block;
 }

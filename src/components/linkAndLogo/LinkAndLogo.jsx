@@ -1,11 +1,12 @@
-import '../pages/home/style.css';
+import '../../pages/home/style.css';
 import { Link } from "react-router-dom";
+import './style.css';
 
 function LinkAndLogo(props) {
   const { src, href, title } = props;
 
   return (
-    <Link to={href}>
+    <Link to={href} className="link_and_logo">
       <img
         className="logo"
         src={`logos/${src}`}
