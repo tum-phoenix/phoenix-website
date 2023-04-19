@@ -1,14 +1,14 @@
 const goals = [
   {
-    goal: "Gain practical experience",
+    title: "Gain practical experience",
     text: "TBD",
   },
   {
-    goal: "Socialize with like-minded people",
+    title: "Socialize with like-minded people",
     text: "TBD",
   },
   {
-    goal: "Encourage responsible technology",
+    title: "Encourage responsible technology",
     text: "TBD",
   },
 ];

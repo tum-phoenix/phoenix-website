@@ -46,7 +46,7 @@ function Home() {
           from low-level engineering to high-level software like flight control and AI.
         </p>
       </BG>
-      <BG>
+      <BG dark="false">
         <h2>Drive Team</h2>
         <img
           className="float_left"
@@ -75,7 +75,7 @@ function Home() {
           Reinforcement Learning help in avoiding obstacles and flying safely. <Link to="/flight">Learn more &gt;</Link>
         </p>
       </BG>
-      <BG>
+      <BG dark="false">
         <h2>Our Supporters</h2>
         <div className="logo_container">
           <LinkAndLogo title="Exotec" href="https://www.exotec.com/" src="exotec.svg" />
@@ -105,7 +105,7 @@ function Home() {
         {goals.map((goal) => (
           <div className="goal">
             <h3>{goal.title}</h3>
-            <p>{goal.description}</p>
+            <p>{goal.text}</p>
           </div>
         ))}
       </BG>

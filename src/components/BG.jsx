@@ -1,18 +1,10 @@
 import '../pages/home/style.css';
-import { useState } from "react";
-
-const count = { val: 2 };
-export { count };
 
 function BG(props) {
-  useState(() => {
-    count.val += 1;
-  });
-
-  const { children } = props;
+  const { children, dark } = props;
 
   return (
-    <div className={count.val % 4 === 0 ? "dark_bg" : "light_bg"}>
+    <div className={dark === "false" ? "light_bg" : "dark_bg"}>
       <div className="center small">
         {children}
       </div>
