@@ -37,7 +37,7 @@
   color: var(--beige);
 }
 
-.red {
+.emph {
   color: var(--red);
 }
 
@@ -88,7 +88,7 @@
   height: 180px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  margin: 50px;
+  margin: 20px 50px;
   display: inline-block;
 }
 

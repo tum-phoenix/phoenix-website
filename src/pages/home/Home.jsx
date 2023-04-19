@@ -12,7 +12,7 @@ function Home() {
 
   const changeHeaderColor = () => {
     if (headerIndex < headerText.length) {
-      setHeaderColor("red");
+      setHeaderColor("var(--red)");
       setHeaderIndex(headerIndex + 1);
     }
   };
@@ -39,11 +39,11 @@ function Home() {
         <h2>About Us</h2>
         <p className="description_text">
           We are the Phoenix Robotics student club at TUM.<br /> A passionate team of students from
-          various disciplines working together to build autonomous model cars and drones supported
+          various disciplines working together to build <span className="emph">autonomous model cars and drones </span> supported
           by the Chair of Automatic Control and the Institute of Flight System Dynamics. <br />
           In our lab in the mechanical engineering building, we design, develop and build every part
-          of our drones:
-          from low-level engineering to high-level software like flight control and AI.
+          of our cars and drones:
+          from <span className="emph">low-level engineering</span> to high-level software like <span className="emph">trajectory planning and AI</span>.
         </p>
       </BG>
       <BG dark="false">
@@ -54,13 +54,13 @@ function Home() {
           alt="one of our robot cars"
         />
         <p>
-          In the award-winning Drive Team, we are working on the next big thing, Autonomous Driving,
-          with our self-made 1:10 scale car. One of the highlights is the yearly participation at
-          the&nbsp;
+          In the award-winning Drive Team, we are working on a 1:10 scale model car that is equipped
+          with various sensors and an on-board computer to enable fully autonomous driving.
+          Our next goal is the&nbsp;
           <a
-            href="https://www.epc.ed.tum.de/phoenix/autonomous-drive/carolo-cup/"
-          >Carolo Cup
-          </a> in Braunschweig. <Link to="/drive">Learn more &gt;</Link>
+            href="https://boschfuturemobility.com"
+          >Bosch Future Mobility Challenge
+          </a> that takes place in May. <Link to="/drive">Learn more &gt;</Link>
         </p>
       </BG>
       <BG>
@@ -97,7 +97,7 @@ function Home() {
           </div>
         </div>
         <p>
-          We are always open to exciting collaborations. <Link to="/contact">Contact us &gt;</Link>
+          We are always open to new and exciting collaborations. <Link to="/contact">Contact us &gt;</Link>
         </p>
       </BG>
       <BG>
