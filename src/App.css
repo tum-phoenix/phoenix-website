@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 2.5em;
   font-weight: 600;

@@ -5,7 +5,7 @@ function BG(props) {
 
   return (
     <div className={dark === "false" ? "light_bg" : "dark_bg"}>
-      <div className="center small">
+      <div className="paddedMiddle small">
         {children}
       </div>
     </div>

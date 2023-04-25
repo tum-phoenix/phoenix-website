@@ -6,7 +6,7 @@ function LinkAndLogo(props) {
   const { src, href, title } = props;
 
   return (
-    <Link to={href} className="link_and_logo">
+    <Link to={href} className="LinkAndLogo">
       <img
         className="logo"
         src={`logos/${src}`}

@@ -1,10 +1,10 @@
-.center {
+.paddedMiddle {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
 }
 
-.center img {
+.paddedMiddle img {
   max-height: 40vh;
 }
 
