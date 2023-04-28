@@ -1,17 +1,18 @@
 .navBar {
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 180px;
   display: flex;
   justify-content: space-between;
   z-index: 20;
   top: 0;
   left: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .navBarLogo .logo {
   padding: 1em;
   max-height: 10vh;
+  width: 10vw;
 }
 
 .navBar h1 {
@@ -41,9 +42,9 @@
 .navBarLinks {
   display: flex;
   height: 100%;
-  padding-top: 50px;
   padding-right: 45px;
   margin-top: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .navBarLinks .activeLink {

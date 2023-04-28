@@ -1,5 +1,12 @@
 .applyContainer h1,
+.applyContainer h2,
 .applyContainer h3,
 .applyContainer p {
   color: var(--dark-blue);
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.apply_title_container {
+  margin-bottom: 100px;
 }

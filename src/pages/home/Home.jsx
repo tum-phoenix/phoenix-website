@@ -70,7 +70,8 @@ function Home() {
           src="images/flight_team.jpg"
           alt="one of our drones"
         />
-        <p> The Flight Team concentrates on drones. Current projects include programming a drone
+        <p>
+          The Flight Team concentrates on drones. Current projects include programming a drone
           to act like the Snatch from Harry Potter’s Quidditch game. Various technologies like
           Reinforcement Learning help in avoiding obstacles and flying safely. <Link to="/flight">Learn more &gt;</Link>
         </p>

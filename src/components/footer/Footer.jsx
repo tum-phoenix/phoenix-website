@@ -16,11 +16,10 @@ function Footer() {
       </p>
       <div className="footerTextLinks">
         <ul><Link to="/contact">Contact</Link></ul>
-        <ul><Link to="/impressum">Impressum</Link></ul>
+        <ul><Link to="/impressum">Imprint</Link></ul>
       </div>
       <div className="footerLinks">
         <LinkAndLogo href="https://www.instagram.com/tumphoenixrobotics/" src="instagram.svg" />
-        <LinkAndLogo href="https://www.facebook.com/tumphoenixrobotics/" src="facebook.svg" />
         <LinkAndLogo href="https://twitter.com/tum_phoenix" src="twitter.svg" />
         <LinkAndLogo href="https://www.linkedin.com/company/phoenix-robotics/" src="linkedin.svg" />
         <LinkAndLogo href="https://github.com/tum-phoenix" src="github.svg" />

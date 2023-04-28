@@ -8,6 +8,9 @@ import Home from "./pages/home/Home";
 import Apply from "./pages/apply/Apply";
 import NavigationBar from "./components/navigationBar/NavigationBar";
 import Footer from "./components/footer/Footer";
+import Contact from "./pages/contact/Contact";
+import Drive from "./pages/drive/Drive";
+import FutureMobilityChallenge from "./pages/futureMobilityChallenge/FutureMobilityChallenge";
 
 export default function Routes() {
   const routes = createBrowserRouter([
@@ -40,11 +43,8 @@ export default function Routes() {
         },
         {
           path: "/drive",
-          element: <Outlet />,
-          children: [
-            { path: "", element: <h1>Autonomous Drive</h1> },
-            { path: ":id", element: <h1>Dynamic Segment: Projects</h1> },
-          ],
+          element: <Drive />,
+          children: [],
         },
         {
           path: "/team",
@@ -57,6 +57,16 @@ export default function Routes() {
         {
           path: "/apply",
           element: <Apply />,
+          children: [],
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+          children: [],
+        },
+        {
+          path: "/future-mobility-challenge",
+          element: <FutureMobilityChallenge />,
           children: [],
         },
       ],

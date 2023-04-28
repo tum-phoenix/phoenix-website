@@ -1,4 +1,4 @@
-.paddedMiddle {
+.home_container .paddedMiddle {
   margin-left: auto;
   margin-right: auto;
   width: 80%;
@@ -87,9 +87,13 @@
   width: 450px;
   height: 180px;
   background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: 20px 50px;
   display: inline-block;
+}
+
+.logo_container:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .goal{
