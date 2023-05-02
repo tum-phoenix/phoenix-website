@@ -11,6 +11,7 @@ import Footer from "./components/footer/Footer";
 import Contact from "./pages/contact/Contact";
 import Drive from "./pages/drive/Drive";
 import FutureMobilityChallenge from "./pages/futureMobilityChallenge/FutureMobilityChallenge";
+import Flight from "./pages/flight/Flight";
 
 export default function Routes() {
   const routes = createBrowserRouter([
@@ -35,11 +36,8 @@ export default function Routes() {
         },
         {
           path: "/flight",
-          element: <Outlet />,
-          children: [
-            { path: "", element: <h1>Autonomous Flight</h1> },
-            { path: ":id", element: <h1>Dynamic Segment: Projects</h1> },
-          ],
+          element: <Flight />,
+          children: [],
         },
         {
           path: "/drive",

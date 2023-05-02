@@ -1,51 +1,51 @@
-export const positionsConfig = [
+export const flightPositions = [
   {
-    name: 'Machine Learning Developer',
-    description:
+    question: 'Machine Learning Developer',
+    answer:
       'Are you interested in practically applying Machine Learning, maybe because you are studying mathematics or computer science? You are curious about Reinforcement Learning based flight control? Then this one is for you!'
       + 'Required skills: knowledge about machine learning and Python programming. Ideally you have some prior experience with PyTorch or some other machine learning framework.',
-    team: 'flight',
     id: 1,
   },
   {
-    name: 'Electronics Engineer',
-    description:
+    question: 'Electronics Engineer',
+    answer:
       'Are you passionate about quadcopters and the electronics of flying machines in general? As an electronics engineer, you will be responsible for choosing the right components for our drones and for the assembling and integration of the electronics into our drones.'
       + 'Skills that you should have are: knowledge about quadcopter electronics and basic understanding of electronics in general.',
-    team: 'flight',
     id: 2,
   },
   {
-    name: 'Software Engineer',
-    description:
+    question: 'Software Engineer',
+    answer:
       'You are studying computer science and want some practical applications for what you learned in your courses? As a software engineer, you will develop high-level software for testing and simulation of our flight controller as well as low-level software for the flight controller itself.'
       + 'Required skills: knowledge about Python programming and Linux.',
-    team: 'flight',
     id: 3,
   },
+];
+
+export const drivePositions = [
   {
-    name: 'Machine Learning Developer',
-    description:
+    question: 'Machine Learning Developer',
+    answer:
       'Are you interested in practically applying Machine Learning, maybe because you are studying mathematics or computer science? You are curious about Reinforcement Learning based flight control? Then this one is for you!'
       + 'Required skills: knowledge about machine learning and Python programming. Ideally you have some prior experience with PyTorch or some other machine learning framework.',
-    team: 'drive',
-    id: 4,
+    id: 1,
   },
+];
+
+export const generalPositions = [
   {
-    name: 'Marketing Manager',
-    description:
+    question: 'Marketing Manager',
+    answer:
       'Help us keep our social media channels up to date and keep people informed about current events, our projects and collaborations, ...',
-    team: 'general',
-    id: 5,
+    id: 1,
   },
   {
-    name: 'HR Manager',
-    description:
+    question: 'HR Manager',
+    answer:
       'Help us find new members who would be a good fit to our team and make their onboarding process as smooth as possible.'
       + 'You will also represent TUM Phoenix at occasional fairs and social events.'
       + 'Required skills: good communication and organization skills.',
-    team: 'general',
-    id: 6,
+    id: 2,
   },
 ];
 

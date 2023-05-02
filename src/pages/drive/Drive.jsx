@@ -35,7 +35,7 @@ function Drive() {
           Center Club and academic professors, we are developing cutting-edge algorithms and
           technologies that will pave the way for the future of mobility.
           Learn more about the challenge on our
-          <Link to="/future-mobility-challenge">dedicated web page &gt;</Link>
+          <Link to="/future-mobility-challenge"> dedicated web page &gt;</Link>
         </p>
       </BG>
       <BG>
