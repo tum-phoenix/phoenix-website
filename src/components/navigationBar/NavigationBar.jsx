@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import navConfig from "./config";
-import "./style.css";
 import LinkAndLogo from "../linkAndLogo/LinkAndLogo";
+import "./style.css";
 
 export default function NavigationBar() {
   const location = useLocation();
