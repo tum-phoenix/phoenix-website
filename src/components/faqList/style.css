@@ -8,6 +8,10 @@
   margin-right: 100px;
 }
 
+.faqList a {
+  color: var(--beige);
+}
+
 .expandIcon {
   position: absolute;
   cursor: pointer;

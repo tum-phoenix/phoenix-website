@@ -1,3 +1,11 @@
 .fmcContainer {
   padding-top: 100px;
 }
+
+.fmcContainer h1,
+.fmcContainer h2,
+.fmcContainer h3,
+.fmcContainer p {
+  margin-left: 5vw;
+  margin-right: 5vw;
+}

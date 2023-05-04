@@ -1,28 +1,16 @@
 import './style.css';
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import BG from "../../components/BG";
 import LinkAndLogo from "../../components/linkAndLogo/LinkAndLogo";
 import goals from "./config";
 
 function Home() {
-  const [headerColor, setHeaderColor] = useState("beige");
-  const headerText = "Autonomous Systems";
-  const [headerIndex, setHeaderIndex] = useState(0);
-
-  const changeHeaderColor = () => {
-    if (headerIndex < headerText.length) {
-      setHeaderColor("var(--red)");
-      setHeaderIndex(headerIndex + 1);
-    }
-  };
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const interval = setTimeout(() => {
-      changeHeaderColor();
-    }, 70);
-    return () => clearTimeout(interval);
-  }, [headerIndex]);
+    setShow(true);
+  }, []);
 
   return (
     <div className="home_container">
@@ -32,7 +20,7 @@ function Home() {
           src="images/team.jpg"
           alt="the phoenix team"
         />
-        <h1 className="header">Prototyping the Next Generation <br />of <span style={{ color: headerColor }}>{headerText.substring(0, headerIndex)}</span></h1>
+        <h1 className="header">Prototyping the Next Generation <br />of <span className={`headerText ${show ? 'visible' : ''}`}>Autonomous Systems</span></h1>
       </div>
       <hr className="red_line" />
       <BG>
@@ -78,10 +66,12 @@ function Home() {
       </BG>
       <BG dark="false">
         <h2>Our Supporters</h2>
+        <p>Our sponsor:</p>
         <div className="logo_container">
           <LinkAndLogo title="Exotec" href="https://www.exotec.com/" src="exotec.svg" />
         </div>
         <div className="chairs_container">
+          <p>Our academic supporters:</p>
           <div className="logo_container">
             <LinkAndLogo
               title="Chair of Automatic Control"
