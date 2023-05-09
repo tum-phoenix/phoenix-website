@@ -23,8 +23,13 @@
 }
 
 .subtitle {
-  margin-left: 5vw;
+  margin-left: 6vw;
   margin-top: 2em;
+  color: var(--red);
+}
+
+.subtitle::before {
+  content: "_ ";
   color: var(--red);
 }
 
