@@ -8,6 +8,11 @@ import Home from "./pages/home/Home";
 import Apply from "./pages/apply/Apply";
 import NavigationBar from "./components/navigationBar/NavigationBar";
 import Footer from "./components/footer/Footer";
+import Contact from "./pages/contact/Contact";
+import Drive from "./pages/drive/Drive";
+import FutureMobilityChallenge from "./pages/futureMobilityChallenge/FutureMobilityChallenge";
+import Flight from "./pages/flight/Flight";
+import Team from "./pages/team/Team";
 
 export default function Routes() {
   const routes = createBrowserRouter([
@@ -32,31 +37,32 @@ export default function Routes() {
         },
         {
           path: "/flight",
-          element: <Outlet />,
-          children: [
-            { path: "", element: <h1>Autonomous Flight</h1> },
-            { path: ":id", element: <h1>Dynamic Segment: Projects</h1> },
-          ],
+          element: <Flight />,
+          children: [],
         },
         {
           path: "/drive",
-          element: <Outlet />,
-          children: [
-            { path: "", element: <h1>Autonomous Drive</h1> },
-            { path: ":id", element: <h1>Dynamic Segment: Projects</h1> },
-          ],
+          element: <Drive />,
+          children: [],
         },
         {
           path: "/team",
-          element: <Outlet />,
-          children: [
-            { path: "", element: <h1>Team</h1> },
-            { path: ":id", element: <h1>Dynamic Segment: Team</h1> },
-          ],
+          element: <Team />,
+          children: [],
         },
         {
           path: "/apply",
           element: <Apply />,
+          children: [],
+        },
+        {
+          path: "/contact",
+          element: <Contact />,
+          children: [],
+        },
+        {
+          path: "/future-mobility-challenge",
+          element: <FutureMobilityChallenge />,
           children: [],
         },
       ],

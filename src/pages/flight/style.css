@@ -1,0 +1,11 @@
+.flightContainer {
+  padding-top: 100px;
+}
+
+.flightContainer h1,
+.flightContainer h2,
+.flightContainer h3,
+.flightContainer p {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}

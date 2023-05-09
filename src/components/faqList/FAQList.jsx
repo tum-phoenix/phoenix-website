@@ -1,35 +1,34 @@
 import { useState } from 'react';
+import ExpandIcon from "./icons/ExpandIcon";
 import './style.css';
 
-function FAQList(props) {
-  const { faqs } = props;
-  // state to store the active index of the clicked question
-  const [activeIndex, setActiveIndex] = useState(null);
+const FaqList = ({ faqConfig }) => {
+  const [expandedQuestion, setExpandedQuestion] = useState(null);
 
-  const handleClick = (index) => {
-    // update activeIndex state based on the clicked index
-    setActiveIndex(index === activeIndex ? null : index);
+  const handleQuestionClick = (id) => {
+    setExpandedQuestion((prev) => (prev === id ? null : id));
   };
 
   return (
-    <div className="faq-list">
-      {faqs.map((faq, index) => (
-        <div className="faq-item" key={faq.id}>
-          <div className="faq-question" role="button" onClick={() => handleClick(index)} onKeyUp={() => handleClick(index)} tabIndex={0}>
-            <div className="faq-icon">
-              {activeIndex === index ? (
-                <span>&#x25BC;</span>
-              ) : (
-                <span>&#x25B6;</span>
-              )}
+    <div className="faqList">
+      {faqConfig.map((faq, index) => (
+        <div key={faq.id}>
+          <h3>
+            <a href={`#${faq.id}`} onClick={() => handleQuestionClick(faq.id)}>
+              <ExpandIcon expanded={expandedQuestion === faq.id} className="expandIcon" />
+              {faq.question}
+            </a>
+          </h3>
+          {expandedQuestion === faq.id && (
+            <div>
+              <p>{faq.answer}</p>
             </div>
-            <div className="faq-text">{faq.question}</div>
-          </div>
-          {activeIndex === index && <div className="faq-answer">{faq.answer}</div>}
+          )}
+          {index !== faqConfig.length - 1 && <hr />}
         </div>
       ))}
     </div>
   );
-}
+};
 
-export default FAQList;
+export default FaqList;

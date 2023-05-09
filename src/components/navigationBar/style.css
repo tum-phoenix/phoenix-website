@@ -1,12 +1,18 @@
 .navBar {
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  height: 180px;
   display: flex;
   justify-content: space-between;
   z-index: 20;
   top: 0;
   left: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.navBarLogo .logo {
+  padding: 1em;
+  max-height: 10vh;
+  width: 10vw;
 }
 
 .navBar h1 {
@@ -19,15 +25,11 @@
 }
 
 .navBar h1::selection {
-  background-color: var(--green);
+  background-color: var(--red);
 }
 
 .navBar h1:hover {
-  color: var(--pink);
-}
-
-.navBar a {
-  text-decoration: none;
+  color: var(--grey);
 }
 
 .navBarBubble {
@@ -40,17 +42,18 @@
 .navBarLinks {
   display: flex;
   height: 100%;
-  padding-top: 50px;
   padding-right: 45px;
+  padding-top: 15px;
   margin-top: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .navBarLinks .activeLink {
-  color: var(--green);
+  color: var(--red);
 }
 
 .navBarLinks .activeLink:hover {
-  color: var(--green);
+  color: var(--red);
 }
 
 .navBarLinks li {
@@ -66,9 +69,9 @@
 }
 
 .navBarLinks a:hover {
-  color: var(--pink);
+  color: var(--grey);
 }
 
 .navBarLinks a::selection {
-  background-color: var(--green);
+  background-color: var(--dark-blue);
 }

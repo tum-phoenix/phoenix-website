@@ -1,108 +1,44 @@
 footer {
   position: relative;
-  top: 50px;
-  height: 50px;
+  padding-top: 5em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: var(--beige);
+  background-color: var(--dark-blue);
+  text-align: center;
 }
 
-.footerColumns {
-  position: relative;
-  top: 130px;
+.footerLogo {
+  height: 3em;
+}
+
+.footerTextLinks {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
-.footerColumn p,
-.footerColumn h2,
-.footerColumn h3,
-.footerColumn a {
-  color: var(--beige);
+.footerTextLinks a {
+  color: var(--link-blue);
+  font-size: 22px;
+  font-weight: 600;
+  transition: color 0.1s linear;
 }
 
-.footerColumn a:hover {
-  color: var(--green);
+.footerTextLinks a:hover {
+  color: var(--grey);
 }
 
-.logoColumn h2 {
-  color: var(--beige);
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  margin-block-start: 0.5em;
-}
-
-.footerColumn h3 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-footer a {
-  text-decoration: none;
-}
-
-.footerColumn {
+.footerLinks {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  margin-left: 5vw;
+  flex-direction: row;
+  justify-content: center;
+  height: 2em;
+  margin: 0 30%;
+  padding: 1em 0;
 }
 
-.footerColumn ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.footerColumn ul li {
-  margin-bottom: 5px;
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.logoColumn {
-  margin-left: 5vw;
-  margin-right: 3vw;
-}
-
-.applyLink {
-  background-color: var(--beige);
-  border: none;
-  border-radius: 30px;
-  padding: 3px 47px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 24px;
-  font-weight: 700;
-  color: var(--dark-blue);
-  margin-right: 20px;
-  margin-top: 5px;
-  cursor: pointer;
-}
-
-.contactLink {
-  background-color: var(--dark-blue);
-  color: var(--beige);
-  border: var(--beige) 3px solid;
-  border-radius: 30px;
-  padding: 1px 30px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 24px;
-  font-weight: 700;
-  margin-top: 5px;
-  cursor: pointer;
-}
-
-.footerBubble {
-  position: absolute;
-  top: -10px;
-  left: 0;
-  width: 100vw;
-  height: 400px;
-  z-index: -1;
+.footerLinks img:hover {
+  filter: brightness(74%);
 }
