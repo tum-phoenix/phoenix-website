@@ -6,11 +6,36 @@ import LinkAndLogo from "../../components/linkAndLogo/LinkAndLogo";
 import goals from "./config";
 
 function Home() {
-  const [show, setShow] = useState(false);
+  const [headerColor, setHeaderColor] = useState("var(--red)");
+  const headerText = "Autonomous Systems";
+  const [headerIndex, setHeaderIndex] = useState(0);
+
+  const changeHeaderColor = () => {
+    if (headerIndex < headerText.length + 32) {
+      setHeaderColor("var(--red)");
+      setHeaderIndex(headerIndex + 1);
+    }
+  };
 
   useEffect(() => {
-    setShow(true);
-  }, []);
+    const interval = setTimeout(() => {
+      changeHeaderColor();
+    }, 80);
+    return () => clearTimeout(interval);
+  }, [headerIndex]);
+
+  /* if headerIndex is less than 32, just let a _ blink */
+  let displayedHeaderText;
+
+  if (headerIndex < 32) {
+    if (Math.floor(headerIndex / 8) % 2 === 0) {
+      displayedHeaderText = "_";
+    } else {
+      displayedHeaderText = "";
+    }
+  } else {
+    displayedHeaderText = headerText.slice(0, headerIndex - 32);
+  }
 
   return (
     <div className="home_container">
@@ -20,7 +45,7 @@ function Home() {
           src="images/team.jpg"
           alt="the phoenix team"
         />
-        <h1 className="header">Prototyping the Next Generation <br />of <span className={`headerText ${show ? 'visible' : ''}`}>Autonomous Systems</span></h1>
+        <h1 className="header">Prototyping the Next Generation <br />of <span style={{ color: headerColor }}>{displayedHeaderText}</span></h1>
       </div>
       <hr className="red_line" />
       <BG>
