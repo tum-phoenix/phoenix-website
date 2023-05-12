@@ -1,20 +1,29 @@
 import './style.css';
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import BG from "../../components/BG";
 import LinkAndLogo from "../../components/linkAndLogo/LinkAndLogo";
 import goals from "./config";
+import ArrowIcon from "./img/ArrowIcon";
 
 function Home() {
   const [headerColor, setHeaderColor] = useState("var(--red)");
   const headerText = "Autonomous Systems";
   const [headerIndex, setHeaderIndex] = useState(0);
+  const scrollRef = useRef(null);
 
   const changeHeaderColor = () => {
     if (headerIndex < headerText.length + 32) {
       setHeaderColor("var(--red)");
       setHeaderIndex(headerIndex + 1);
     }
+  };
+
+  const handleArrowClick = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
   };
 
   useEffect(() => {
@@ -46,6 +55,9 @@ function Home() {
           alt="the phoenix team"
         />
         <h1 className="header">Prototyping the Next Generation <br />of <span style={{ color: headerColor }}>{displayedHeaderText}</span></h1>
+        <div className="image_overlay" ref={scrollRef}>
+          <ArrowIcon onClick={handleArrowClick} />
+        </div>
       </div>
       <hr className="red_line" />
       <BG>

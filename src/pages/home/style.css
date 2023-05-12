@@ -80,6 +80,13 @@
   padding-right: 1em;
 }
 
+.image_overlay {
+  position: absolute;
+  margin-top: -30px;
+  left: 50%;
+  transform: translateY(-50%);
+}
+
 .red_line {
   height: 8px;
   background-color: var(--red);
