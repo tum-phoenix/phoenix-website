@@ -5,7 +5,7 @@ const ArrowIcon = (...props) => (
     xmlns="http://www.w3.org/2000/svg"
     id="angle-down"
     viewBox="0 0 1152 1896.0833"
-    fill="var(--red)"
+    fill="var(--beige)"
     {...props}
   >
     <path

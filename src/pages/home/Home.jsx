@@ -112,14 +112,14 @@ function Home() {
           <div className="logo_container">
             <LinkAndLogo
               title="Chair of Automatic Control"
-              href="https://www.fsd.ed.tum.de/"
+              href="https://www.epc.ed.tum.de/en/rt/home/"
               src="rt.jpg"
             />
           </div>
           <div className="logo_container">
             <LinkAndLogo
               title="Institute of Flight System Dynamics"
-              href="https://www.epc.ed.tum.de/en/rt/home/"
+              href="https://www.fsd.ed.tum.de/"
               src="fsd.jpg"
             />
           </div>

@@ -25,13 +25,13 @@
 }
 
 .background {
-  filter: brightness(65%);
+  filter: brightness(75%);
   margin-bottom: -10px;
 }
 
 .header {
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 5%;
   text-align: left;
   color: var(--beige);
