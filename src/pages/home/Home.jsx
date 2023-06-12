@@ -1,6 +1,6 @@
 import './style.css';
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import BG from "../../components/BG";
 import LinkAndLogo from "../../components/linkAndLogo/LinkAndLogo";
 import goals from "./config";
@@ -10,20 +10,12 @@ function Home() {
   const [headerColor, setHeaderColor] = useState("var(--red)");
   const headerText = "Autonomous Systems";
   const [headerIndex, setHeaderIndex] = useState(0);
-  const scrollRef = useRef(null);
 
   const changeHeaderColor = () => {
     if (headerIndex < headerText.length + 32) {
       setHeaderColor("var(--red)");
       setHeaderIndex(headerIndex + 1);
     }
-  };
-
-  const handleArrowClick = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: 'smooth',
-    });
   };
 
   useEffect(() => {
@@ -55,13 +47,15 @@ function Home() {
           alt="the phoenix team"
         />
         <h1 className="header">Prototyping the Next Generation <br />of <span style={{ color: headerColor }}>{displayedHeaderText}</span></h1>
-        <div className="image_overlay" ref={scrollRef}>
-          <ArrowIcon onClick={handleArrowClick} />
+        <div className="image_overlay">
+          <a href="#about">
+            <ArrowIcon />
+          </a>
         </div>
       </div>
       <hr className="red_line" />
       <BG>
-        <h2>About Us</h2>
+        <h2 id="about">About Us</h2>
         <p className="description_text">
           We are the Phoenix Robotics student club at TUM.<br /> A passionate team of students from
           various disciplines working together to build <span className="emph">autonomous model cars and drones </span> supported

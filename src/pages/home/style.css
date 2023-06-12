@@ -1,3 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#about {
+  scroll-margin-top: 80px;
+}
+
 .home_container .paddedMiddle {
   margin-left: auto;
   margin-right: auto;
