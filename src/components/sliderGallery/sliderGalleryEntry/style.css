@@ -1,0 +1,37 @@
+.sliderEntry {
+  width: 80vw;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+.sliderEntryTitle {
+  font-size: 24px;
+  color: var(--beige);
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+.sliderEntryText {
+  margin-top: 0;
+}
+
+.sliderImgContainer {
+  height: 350px;
+  width: 80vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.sliderEntryImg {
+  height: 100%;
+  pointer-events: none;
+  -webkit-transition: 0.5s -webkit-filter linear;
+  -moz-transition: 0.5s -moz-filter linear;
+  -moz-transition: 0.5s filter linear;
+  -ms-transition: 0.5s -ms-filter linear;
+  -o-transition: 0.5s -o-filter linear;
+  transition: 0.5s filter linear, 1s -webkit-filter linear;
+}

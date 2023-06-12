@@ -1,5 +1,7 @@
 import BG from "../../components/BG";
 import "./style.css";
+import SliderGallery from "../../components/sliderGallery/SliderGallery";
+import projectsConfig from "./config";
 
 export default function Flight() {
   return (
@@ -27,7 +29,7 @@ export default function Flight() {
       </BG>
       <BG>
         <h2>Our Recent Projects</h2>
-        <p>Coming soon ...</p>
+        <SliderGallery projects={projectsConfig} />
       </BG>
     </div>
   );
