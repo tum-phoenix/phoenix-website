@@ -4,13 +4,39 @@ import { useEffect, useState } from "react";
 import BG from "../../components/BG";
 import LinkAndLogo from "../../components/linkAndLogo/LinkAndLogo";
 import goals from "./config";
+import ArrowIcon from "./img/ArrowIcon";
 
 function Home() {
-  const [show, setShow] = useState(false);
+  const [headerColor, setHeaderColor] = useState("var(--red)");
+  const headerText = "Autonomous Systems";
+  const [headerIndex, setHeaderIndex] = useState(0);
+
+  const changeHeaderColor = () => {
+    if (headerIndex < headerText.length + 32) {
+      setHeaderColor("var(--red)");
+      setHeaderIndex(headerIndex + 1);
+    }
+  };
 
   useEffect(() => {
-    setShow(true);
-  }, []);
+    const interval = setTimeout(() => {
+      changeHeaderColor();
+    }, 80);
+    return () => clearTimeout(interval);
+  }, [headerIndex]);
+
+  /* if headerIndex is less than 32, just let a _ blink */
+  let displayedHeaderText;
+
+  if (headerIndex < 32) {
+    if (Math.floor(headerIndex / 8) % 2 === 0) {
+      displayedHeaderText = "_";
+    } else {
+      displayedHeaderText = "";
+    }
+  } else {
+    displayedHeaderText = headerText.slice(0, headerIndex - 32);
+  }
 
   return (
     <div className="home_container">
@@ -20,11 +46,16 @@ function Home() {
           src="images/team.jpg"
           alt="the phoenix team"
         />
-        <h1 className="header">Prototyping the Next Generation <br />of <span className={`headerText ${show ? 'visible' : ''}`}>Autonomous Systems</span></h1>
+        <h1 className="header">Prototyping the Next Generation <br />of <span style={{ color: headerColor }}>{displayedHeaderText}</span></h1>
+        <div className="image_overlay">
+          <a href="#about">
+            <ArrowIcon />
+          </a>
+        </div>
       </div>
       <hr className="red_line" />
       <BG>
-        <h2>About Us</h2>
+        <h2 id="about">About Us</h2>
         <p className="description_text">
           We are the Phoenix Robotics student club at TUM.<br /> A passionate team of students from
           various disciplines working together to build <span className="emph">autonomous model cars and drones </span> supported
@@ -75,14 +106,14 @@ function Home() {
           <div className="logo_container">
             <LinkAndLogo
               title="Chair of Automatic Control"
-              href="https://www.fsd.ed.tum.de/"
+              href="https://www.epc.ed.tum.de/en/rt/home/"
               src="rt.jpg"
             />
           </div>
           <div className="logo_container">
             <LinkAndLogo
               title="Institute of Flight System Dynamics"
-              href="https://www.epc.ed.tum.de/en/rt/home/"
+              href="https://www.fsd.ed.tum.de/"
               src="fsd.jpg"
             />
           </div>

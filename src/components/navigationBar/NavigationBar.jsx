@@ -13,7 +13,7 @@ export default function NavigationBar() {
 
   useEffect(() => {
     function handleScroll() {
-      if (currentPage === "/home" && window.scrollY < 400) {
+      if (currentPage === "/home" && window.scrollY < 200) {
         setBgColor("transparent");
         setTitleBarLarge(true);
       } else {

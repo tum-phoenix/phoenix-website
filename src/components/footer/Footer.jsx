@@ -1,5 +1,4 @@
 import "./style.css";
-import { Link } from "react-router-dom";
 import LinkAndLogo from "../linkAndLogo/LinkAndLogo";
 
 function Footer() {
@@ -15,8 +14,7 @@ function Footer() {
         Am Lehrstuhl für Regelungstechnik
       </p>
       <div className="footerTextLinks">
-        <ul><Link to="/contact">Contact</Link></ul>
-        <ul><Link to="/impressum">Imprint</Link></ul>
+        <ul><a href="mailto:kontakt@tum-phoenix.de">Contact us &gt;</a></ul>
       </div>
       <div className="footerLinks">
         <LinkAndLogo href="https://www.instagram.com/tumphoenixrobotics/" src="instagram.svg" />
