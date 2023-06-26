@@ -1,10 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700&display=swap");
 
 body {
   margin: 0;
   --red: #F12716;
   --link-blue: #1E6AFF;
-  --dark-blue: #01001d;
+  --dark-grey: rgba(0, 0, 0, 0.85);
   --grey: #BDBDBD;
   --beige: #fff1e9;
   overflow-x: hidden;

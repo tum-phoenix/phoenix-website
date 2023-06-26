@@ -17,7 +17,7 @@
 
 .navBar h1 {
   margin-top: 0;
-  color: var(--dark-blue);
+  color: var(--dark-grey);
   font-size: 32px;
   padding-left: 80px;
   padding-top: 45px;
@@ -73,5 +73,5 @@
 }
 
 .navBarLinks a::selection {
-  background-color: var(--dark-blue);
+  background-color: var(--dark-grey);
 }

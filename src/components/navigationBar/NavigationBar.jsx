@@ -17,7 +17,7 @@ export default function NavigationBar() {
         setBgColor("transparent");
         setTitleBarLarge(true);
       } else {
-        setBgColor("var(--dark-blue)");
+        setBgColor("var(--dark-grey)");
         setTitleBarLarge(false);
       }
     }

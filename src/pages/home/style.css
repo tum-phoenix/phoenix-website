@@ -65,7 +65,7 @@ html {
 }
 
 .light_bg {
-  color: var(--dark-blue);
+  color: var(--dark-grey);
   background-color: var(--beige);
   display: flow-root;
   padding-bottom: 1em;
@@ -73,7 +73,7 @@ html {
 
 .dark_bg {
   color: var(--beige);
-  background-color: var(--dark-blue);
+  background-color: var(--dark-grey);
   display: flow-root;
   padding-bottom: 1em;
 }
