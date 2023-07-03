@@ -24,7 +24,7 @@ function Apply() {
             Thank you for all your applications.
             Please come back end of September.
           </p>
-        )};
+        )}
       </div>
       <div className="applyPositions">
         <h2 className="positionsText">Open positions</h2>
