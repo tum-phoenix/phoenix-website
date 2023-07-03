@@ -1,6 +1,6 @@
+import { ViewportProvider } from 'react-viewport-utils';
 import "./App.css";
 import Routes from "./Routes";
-import { ViewportProvider } from "./context/viewportContext";
 
 function App() {
   return (
