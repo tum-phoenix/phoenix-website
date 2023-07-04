@@ -1,4 +1,4 @@
-import { ViewportProvider } from 'react-viewport-utils';
+import { ViewportProvider } from "./context/viewportContext";
 import "./App.css";
 import Routes from "./Routes";
 

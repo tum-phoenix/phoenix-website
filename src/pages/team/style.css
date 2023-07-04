@@ -1,5 +1,12 @@
 .teamContainer {
   padding-top: 100px;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+@media (max-width: 768px) {
+  .teamContainer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
 }

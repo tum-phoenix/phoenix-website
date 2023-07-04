@@ -6,6 +6,16 @@
   margin-right: 10vw;
 }
 
+@media (max-width: 768px) {
+  .driveContainer h1,
+  .driveContainer h2,
+  .driveContainer h3,
+  .driveContainer p {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
 .driveContainer {
   padding-top: 100px;
 }

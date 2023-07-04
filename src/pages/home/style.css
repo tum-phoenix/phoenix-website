@@ -12,6 +12,12 @@ html {
   width: 80%;
 }
 
+@media (max-width: 768px) {
+  .home_container .paddedMiddle {
+    width: 90%;
+  }
+}
+
 .paddedMiddle img {
   max-height: 40vh;
 }
@@ -43,6 +49,19 @@ html {
   left: 5%;
   text-align: left;
   color: var(--beige);
+}
+
+@media (max-width: 768px) {
+  .header {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .background {
+    height: 100vh;
+  }
 }
 
 .headerText {
@@ -88,11 +107,11 @@ html {
   padding-right: 1em;
 }
 
-.image_overlay {
+.arrow_icon {
   position: absolute;
-  margin-top: -30px;
+  margin-top: -70px;
   left: 50%;
-  transform: translateY(-50%);
+  transform: translateX(-50%);
 }
 
 .red_line {
@@ -104,12 +123,17 @@ html {
 
 .description_text {
   font-size: 1.5em;
-  margin: 0 80px 80px;
+}
+
+@media (max-width: 768px) {
+  .description_text {
+    font-size: 1em;
+  }
 }
 
 .logo_container {
-  width: 450px;
-  height: 180px;
+  width: min(450px, 40vw);
+  height: min(180px, 15vw);
   background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   margin: 20px 50px;
@@ -118,6 +142,12 @@ html {
 
 .logo_container:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .logo_container {
+    margin: 0;
+  }
 }
 
 .goal{

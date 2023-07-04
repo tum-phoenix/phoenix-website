@@ -47,7 +47,7 @@ function Home() {
           alt="the phoenix team"
         />
         <h1 className="header">Prototyping the Next Generation <br />of <span style={{ color: headerColor }}>{displayedHeaderText}</span></h1>
-        <div className="image_overlay">
+        <div className="arrow_icon">
           <a href="#about">
             <ArrowIcon />
           </a>
