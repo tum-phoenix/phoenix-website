@@ -14,13 +14,21 @@ function Footer() {
         Am Lehrstuhl für Regelungstechnik
       </p>
       <div className="footerTextLinks">
-        <ul><a href="mailto:kontakt@tum-phoenix.de">Contact us &gt;</a></ul>
+        <a href="mailto:kontakt@tum-phoenix.de">Contact us &gt;</a>
       </div>
       <div className="footerLinks">
-        <LinkAndLogo href="https://www.instagram.com/tumphoenixrobotics/" src="instagram.svg" />
-        <LinkAndLogo href="https://twitter.com/tum_phoenix" src="twitter.svg" />
-        <LinkAndLogo href="https://www.linkedin.com/company/phoenix-robotics/" src="linkedin.svg" />
-        <LinkAndLogo href="https://github.com/tum-phoenix" src="github.svg" />
+        <a href="https://www.instagram.com/tumphoenixrobotics/">
+          <img src="logos/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com/tum_phoenix">
+          <img src="logos/twitter.svg" alt="Twitter" />
+        </a>
+        <a href="https://www.linkedin.com/company/phoenix-robotics/">
+          <img src="logos/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/tum-phoenix">
+          <img src="logos/github.svg" alt="GitHub" />
+        </a>
       </div>
     </footer>
   );
