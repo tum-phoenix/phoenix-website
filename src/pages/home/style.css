@@ -109,6 +109,7 @@ html {
 
 .arrow_icon {
   position: absolute;
+  width: 50px;
   margin-top: -70px;
   left: 50%;
   transform: translateX(-50%);
@@ -126,6 +127,12 @@ html {
 }
 
 @media (max-width: 768px) {
+  .float_left,
+  .float_right {
+    float: none;
+    padding-right: 0;
+  }
+
   .description_text {
     font-size: 1em;
   }
@@ -145,6 +152,11 @@ html {
 }
 
 @media (max-width: 768px) {
+  .arrow_icon {
+    width: 30px;
+    margin-top: -40px;
+  }
+
   .logo_container {
     margin: 0;
   }
