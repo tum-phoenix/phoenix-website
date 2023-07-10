@@ -5,11 +5,13 @@ import BG from "../../components/BG";
 import LinkAndLogo from "../../components/linkAndLogo/LinkAndLogo";
 import goals from "./config";
 import ArrowIcon from "./img/ArrowIcon";
+import { useViewport } from "../../context/viewportContext";
 
 function Home() {
   const [headerColor, setHeaderColor] = useState("var(--red)");
   const headerText = "Autonomous Systems";
   const [headerIndex, setHeaderIndex] = useState(0);
+  const { width } = useViewport();
 
   const changeHeaderColor = () => {
     if (headerIndex < headerText.length + 32) {
@@ -79,7 +81,7 @@ function Home() {
           <a
             href="https://boschfuturemobility.com"
           >Bosch Future Mobility Challenge
-          </a> that takes place in May. <Link to="/drive">Learn more &gt;</Link>
+          </a> that takes place in May. {width < 768 && <br />}<Link to="/drive">Learn more &gt;</Link>
         </p>
       </BG>
       <BG>
@@ -91,8 +93,8 @@ function Home() {
         />
         <p>
           The Flight Team concentrates on drones. Current projects include programming a drone
-          to act like the Snatch from Harry Potter’s Quidditch game. Various technologies like
-          Reinforcement Learning help in avoiding obstacles and flying safely. <Link to="/flight">Learn more &gt;</Link>
+          to act like the Snitch in Harry Potter’s Quidditch game. Various technologies like
+          Reinforcement Learning help in avoiding obstacles and flying safely. {width < 768 && <br />}<Link to="/flight">Learn more &gt;</Link>
         </p>
       </BG>
       <BG dark="false">
@@ -119,7 +121,7 @@ function Home() {
           </div>
         </div>
         <p>
-          We are always open to new and exciting collaborations. <Link to="/contact">Contact us &gt;</Link>
+          We are always open to new and exciting collaborations. {width < 768 && <br />}<a href="mailto:kontakt@tum-phoenix.de">Contact us &gt;</a>
         </p>
       </BG>
       <BG>

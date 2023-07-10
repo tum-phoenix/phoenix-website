@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
 
 body {
   margin: 0;
@@ -6,7 +6,7 @@ body {
   --link-blue: #1E6AFF;
   --dark-grey: rgba(0, 0, 0, 0.85);
   --grey: #BDBDBD;
-  --beige: #fff1e9;
+  --beige: rgb(240, 235, 235);
   overflow-x: hidden;
   background-color: var(--beige);
   font-family: "Poppins", sans-serif;
