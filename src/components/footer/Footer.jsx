@@ -15,6 +15,7 @@ function Footer() {
       </p>
       <div className="footerTextLinks">
         <a href="mailto:kontakt@tum-phoenix.de">Contact us &gt;</a>
+        <a href="/imprint">Imprint</a>
       </div>
       <div className="footerLinks">
         <a href="https://www.instagram.com/tumphoenixrobotics/">

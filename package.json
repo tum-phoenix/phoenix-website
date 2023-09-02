@@ -10,10 +10,11 @@
     "framer-motion": "^10.2.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-flickity-component": "^4.0.6",
     "react-image-gallery": "^1.2.11",
     "react-router-dom": "^6.8.2",
-    "react-viewport-utils": "^2.0.2",
     "react-wavify": "^1.7.0",
+    "scroll-to": "^0.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -41,7 +42,7 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^8.35.0",
+    "eslint": "^8.44.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-jsx-a11y": "^6.7.1",

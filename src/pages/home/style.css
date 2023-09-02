@@ -54,8 +54,8 @@ html {
 @media (max-width: 768px) {
   .header {
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20%;
+    transform: translate(-10%, -50%);
     text-align: center;
   }
 
@@ -159,6 +159,10 @@ html {
 
   .logo_container {
     margin: 0;
+  }
+
+  .navBarLogo {
+    margin-left: 0;
   }
 }
 

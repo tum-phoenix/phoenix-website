@@ -27,7 +27,6 @@ function Home() {
     return () => clearTimeout(interval);
   }, [headerIndex]);
 
-  /* if headerIndex is less than 32, just let a _ blink */
   let displayedHeaderText;
 
   if (headerIndex < 32) {
