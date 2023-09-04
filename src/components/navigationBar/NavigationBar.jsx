@@ -1,10 +1,10 @@
-import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import navConfig from "./config";
 import LinkAndLogo from "../linkAndLogo/LinkAndLogo";
-import "./style.css";
 import { useViewport } from "../../context/viewportContext";
 import MenuIcon from "./img/MenuIcon";
+import "./style.css";
 
 export default function NavigationBar() {
   const location = useLocation();
@@ -43,25 +43,9 @@ export default function NavigationBar() {
     setCurrentPage(location.pathname);
   }, [location]);
 
-  useEffect(() => {
-    const listItems = document.querySelectorAll('.navBarLinks li');
-    listItems.forEach((item, index) => {
-      const delay = index * 100; // Adjust the delay as needed
-      setTimeout(() => {
-        item.classList.add('visible');
-      }, delay);
-    });
-
-    return () => {
-      listItems.forEach((item) => {
-        item.classList.remove('visible');
-      });
-    };
-  }, [currentPage, menuExpanded]);
-
   return (
     <div
-      className="navBar"
+      className="navBarContainer"
       style={{ backgroundColor: bgColor, height: 60 }}
     >
       <div className="navBarLogo">
@@ -73,10 +57,10 @@ export default function NavigationBar() {
           <MenuIcon expanded={menuExpanded} />
         </div>
       )}
-      <div className="navBarLinkContainer">
+      <div className={`navBarLinkContainer ${menuExpanded ? 'expanded' : ''}`}>
         <ul className="navBarLinks">
           {navConfig.map((navLink) => (
-            <li key={`${navLink.path} ${activeLink === navLink ? "activeLink" : ""}`}>
+            <li key={`${navLink.name} ${activeLink === navLink ? "activeLink" : ""}`}>
               <Link
                 className={currentPage.startsWith(navLink.path) ? 'activeLink' : ''}
                 to={navLink.path}
@@ -88,6 +72,10 @@ export default function NavigationBar() {
           ))}
         </ul>
       </div>
+      {menuExpanded && (
+        // eslint-disable-next-line
+        <div className="overlay" onClick={toggleMenu} />
+      )}
     </div>
   );
 }

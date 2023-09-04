@@ -1,9 +1,9 @@
-.navBar {
+.navBarContainer {
   position: fixed;
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  z-index: 20;
+  z-index: 1;
   top: 0;
   left: 0;
   transition: 0.3s ease-in-out;
@@ -15,7 +15,7 @@
   width: 10vw;
 }
 
-.navBar h1 {
+.navBarContainer h1 {
   margin-top: 0;
   color: var(--dark-grey);
   font-size: 32px;
@@ -24,11 +24,11 @@
   transition: color 0.1s linear;
 }
 
-.navBar h1::selection {
+.navBarContainer h1::selection {
   background-color: var(--red);
 }
 
-.navBar h1:hover {
+.navBarContainer h1:hover {
   color: var(--grey);
 }
 
@@ -81,7 +81,7 @@
     margin-left: 1em
   }
 
-  .navBar h1 {
+  .navBarContainer h1 {
     padding-left: 0;
     padding-top: 0;
     margin-top: 0;
@@ -89,23 +89,20 @@
   }
 
   .navBarLinkContainer {
-    top: 0;
-    right: 0;
-    display: none;
-    background-color: transparent;
-    transition: background-color 0.3s ease-in-out;
-  }
-
-  .navBarLinkContainer.expanded {
-    display: block;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(100%);
     position: absolute;
     top: 0;
     right: 0;
-    width: 100%;
+    width: 75%;
     height: 100vh;
-    background-color: var(--dark-grey);
-    z-index: 1;
-    transition: background-color 0.3s ease-in-out;
+    overflow: auto;
+    background: var(--dark-grey);
+  }
+
+  .navBarLinkContainer.expanded {
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
   }
 
   .navBarLinks {
@@ -114,23 +111,14 @@
     align-items: flex-start;
     height: 100%;
     padding-top: 0;
-    padding-right: 0;
-    margin-top: 20px;
+    padding-left: 10px;
+    margin-top: 50px;
   }
 
   .navBarLinks li {
     list-style: none;
     padding: 0 25px;
     margin-top: 20px;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-
-  .navBarLinks li.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
 
   .navBarLinks a {
@@ -153,5 +141,15 @@
     border: none;
     outline: none;
     z-index: 2;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
   }
 }

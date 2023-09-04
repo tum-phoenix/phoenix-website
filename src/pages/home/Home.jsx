@@ -71,7 +71,7 @@ function Home() {
         <img
           className="float_left"
           src="images/drive_team.jpg"
-          alt="one of our robot cars"
+          alt="our autonomous model car"
         />
         <p>
           In the award-winning Drive Team, we are working on a 1:10 scale model car that is equipped
@@ -88,7 +88,7 @@ function Home() {
         <img
           className="float_right"
           src="images/flight_team.jpg"
-          alt="one of our drones"
+          alt="Golden Snitch drone"
         />
         <p>
           The Flight Team concentrates on drones. Current projects include programming a drone
