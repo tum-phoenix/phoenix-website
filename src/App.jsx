@@ -1,8 +1,13 @@
+import { ViewportProvider } from "./context/viewportContext";
 import "./App.css";
 import Routes from "./Routes";
 
 function App() {
-  return <Routes />;
+  return (
+    <ViewportProvider>
+      <Routes />
+    </ViewportProvider>
+  );
 }
 
 export default App;

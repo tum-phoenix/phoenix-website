@@ -1,49 +1,70 @@
-import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import navConfig from "./config";
 import LinkAndLogo from "../linkAndLogo/LinkAndLogo";
+import { useViewport } from "../../context/viewportContext";
+import MenuIcon from "./img/MenuIcon";
 import "./style.css";
 
 export default function NavigationBar() {
   const location = useLocation();
   const activeLink = navConfig.find((navLink) => navLink.path === window.location.pathname);
   const [bgColor, setBgColor] = useState("transparent");
-  const [titleBarLarge, setTitleBarLarge] = useState(true);
   const [currentPage, setCurrentPage] = useState("/home");
+  const [menuExpanded, setMenuExpanded] = useState(false);
+  const { width } = useViewport();
+
+  const toggleMenu = () => {
+    setMenuExpanded(!menuExpanded);
+  };
+
+  useEffect(() => {
+    const shouldSetDarkBackground = (currentPage === '/home' && window.scrollY > 200)
+      || currentPage !== '/home';
+
+    setBgColor(shouldSetDarkBackground ? 'var(--dark-grey)' : 'transparent');
+  }, [currentPage, menuExpanded, width]);
 
   useEffect(() => {
     function handleScroll() {
-      if (currentPage === "/home" && window.scrollY < 200) {
-        setBgColor("transparent");
-        setTitleBarLarge(true);
-      } else {
-        setBgColor("var(--dark-blue)");
-        setTitleBarLarge(false);
-      }
+      const shouldSetDarkBackground = (currentPage === '/home' && window.scrollY > 200)
+        || currentPage !== '/home';
+
+      setBgColor(shouldSetDarkBackground ? 'var(--dark-grey)' : 'transparent');
     }
 
-    window.addEventListener("scroll", handleScroll);
-
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [currentPage]);
+  }, [currentPage, menuExpanded, width]);
 
   useEffect(() => {
     setCurrentPage(location.pathname);
   }, [location]);
 
   return (
-    <div className="navBar" style={{ backgroundColor: bgColor, height: titleBarLarge ? 100 : 60 }}>
+    <div
+      className="navBarContainer"
+      style={{ backgroundColor: bgColor, height: 60 }}
+    >
       <div className="navBarLogo">
         <LinkAndLogo href="/home" src="phoenix.svg" />
       </div>
-      <div className="navBarLinkContainer">
+      {width < 768 && (
+        // eslint-disable-next-line
+        <div className="mobileMenuButton" onClick={toggleMenu}>
+          <MenuIcon expanded={menuExpanded} />
+        </div>
+      )}
+      <div className={`navBarLinkContainer ${menuExpanded ? 'expanded' : ''}`}>
         <ul className="navBarLinks">
           {navConfig.map((navLink) => (
-            <li key={`${navLink.path} ${activeLink === navLink ? "activeLink" : ""}`}>
+            <li key={`${navLink.name} ${activeLink === navLink ? "activeLink" : ""}`}>
               <Link
+                className={currentPage.startsWith(navLink.path) ? 'activeLink' : ''}
                 to={navLink.path}
+                onClick={toggleMenu}
               >
                 {navLink.name}
               </Link>
@@ -51,6 +72,10 @@ export default function NavigationBar() {
           ))}
         </ul>
       </div>
+      {menuExpanded && (
+        // eslint-disable-next-line
+        <div className="overlay" onClick={toggleMenu} />
+      )}
     </div>
   );
 }

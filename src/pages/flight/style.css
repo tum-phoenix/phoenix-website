@@ -9,3 +9,13 @@
   margin-left: 10vw;
   margin-right: 10vw;
 }
+
+@media (max-width: 768px) {
+  .flightContainer h1,
+  .flightContainer h2,
+  .flightContainer h3,
+  .flightContainer p {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
