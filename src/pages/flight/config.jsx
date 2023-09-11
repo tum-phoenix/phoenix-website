@@ -15,7 +15,7 @@ const projectsConfig = {
     id: "gstechnicalsketch",
     title: "gs_Technical_Sketch",
     image: gstsImg,
-    text: "",
+    text: "  ",
   },
   gs_electronics: {
     id: "gselectronics",
