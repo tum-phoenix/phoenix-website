@@ -9,7 +9,7 @@ const projectsConfig = {
     id: "goldensnitch",
     title: "Golden Snitch",
     image: gsImg,
-    text: "",
+    text: "   ",
   },
   gs_technical_sketch: {
     id: "gstechnicalsketch",
