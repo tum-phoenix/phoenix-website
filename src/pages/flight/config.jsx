@@ -21,7 +21,7 @@ const projectsConfig = {
     id: "gselectronics",
     title: "gs_electronics",
     image: gseImg,
-    text: "",
+    text: "  ",
   },
   tarot: {
     id: "tarot",
