@@ -1,9 +1,9 @@
 import FAQList from "../../components/faqList/FAQList";
-import { flightPositions, drivePositions, generalPositions, faqs } from "./config";
+import { drivePositions, generalPositions, faqs } from "./config";
 import "./style.css";
 
 function Apply() {
-  const applicationsOpen = false;
+  const applicationsOpen = true;
 
   return (
     <div className="applyContainer">
@@ -28,8 +28,6 @@ function Apply() {
       </div>
       <div className="applyPositions">
         <h2 className="positionsText">Open positions</h2>
-        <h3 className="subtitle">Autonomous Flight</h3>
-        <FAQList faqConfig={flightPositions} />
         <h3 className="subtitle">Autonomous Drive</h3>
         <FAQList faqConfig={drivePositions} />
         <h3 className="subtitle">General</h3>
